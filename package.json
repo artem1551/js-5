@@ -1,5 +1,5 @@
 {
-  "name": "js-3",
+  "name": "js",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -7,19 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js"
   },
-  "dependencies": {
-    "bootstrap": "4.6.0",
-    "node-static": "0.7.11",
-    "express": "4.17.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/artem1551/js-3.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/artem1551/js-3/issues"
-  },
-  "homepage": "https://github.com/artem1551/js-3#readme"
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1"
+  }
 }

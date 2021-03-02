@@ -1,13 +1,22 @@
-const http = require('http');
-const static = require('node-static');
-const Server = static.Server;
-const file = new Server('.');
-const port = 1234;
+const express = require('express');
+const PersonService = require('./Person.service')
+const app = express();
+const port = 5050;
 
-const app = http.createServer(function(req, res) {
-  file.serve(req, res);
+app.use(express.static(__dirname + './../'));
+
+app.all('*', (req, res, next) => {
+    console.log(`${req.method} ${req.originalUrl}`)
+
+    next()
 });
 
-app.listen(port);
+app.get('/person', PersonService.getPerson);
+app.get('/person/name', PersonService.getPersonName);
+app.get('/person/address', PersonService.getPersonAddress);
+app.get('/person/post/recipient', PersonService.getPersonPostInfo);
+// app.get('/person/:personValue', PersonService.getPersonValue);
 
-console.log(`Server running on port ${port}`);
+app.listen(port, () => {
+    console.log(`${port} started`)
+});
