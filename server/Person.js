@@ -5,11 +5,9 @@ const person = {
     height: "200",
     weight: "100",
     degree: "50",
-    address: {
-        city: "U",
-        street: "S",
-        postCode: "A",
-    }
+    city: "U",
+    street: "S",
+    postCode: "A",
 };
 
 module.exports = {
