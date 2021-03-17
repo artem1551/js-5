@@ -15,7 +15,6 @@ app.get('/person', PersonService.getPerson);
 app.get('/person/name', PersonService.getPersonName);
 app.get('/person/address', PersonService.getPersonAddress);
 app.get('/person/post/recipient', PersonService.getPersonPostInfo);
-// app.get('/person/:personValue', PersonService.getPersonValue);
 
 app.listen(port, () => {
     console.log(`${port} started`)
